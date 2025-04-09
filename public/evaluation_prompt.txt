@@ -1,0 +1,14 @@
+Evaluate the commit message below.
+
+If it fully meets all criteria, reply **only** with the exact same commit message.
+If it does **not** fully meet all criteria, reply **only** with a corrected commit message.
+Your response must contain **nothing else**—no explanations, no punctuation, no extra words.
+
+### Criteria:
+- Must be **less than 72 characters**
+- Must use **imperative mood** (e.g., "Fix bug" instead of "Fixed bug")
+- Must **clearly describe the change**
+- Must **not** include explanations or reasoning
+- May describe **multiple changes**
+
+Commit message to evaluate: "[MESSAGE]"
