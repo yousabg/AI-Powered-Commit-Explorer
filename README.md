@@ -112,9 +112,9 @@ or localhost restrictions.
 
 ### 🔧 Backend Setup Instructions
 
-1. **Navigate to the backend directory**:
+### 1. Navigate to the backend directory**:
 
-         cd backend
+      cd backend
 
 ### 2. Create and activate a virtual environment:
 
