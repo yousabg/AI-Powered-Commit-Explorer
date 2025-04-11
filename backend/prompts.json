@@ -15,18 +15,12 @@
     "id": 3,
     "message": "This is the list of diff(s) for a commit, please generate the corresponding commit message, and please note providing the commit message directly without additional statements: [DIFF]",
     "promptType": "Automatic Commit Message Generation: A Critical Review and Directions for Future Work",
-    "evaluate": false
+    "evaluate": true
   },
   {
     "id": 4,
     "message": "Generate a high-quality commit message based on the given information.  Your response must contain **only** the commit message\u2014no explanations, no punctuation, no extra words.  ### Requirements: - Must **clearly describe what changed and why** - Must follow **standard commit message formatting** - Must use **imperative mood** - Must **not** include any punctuation  ### Given Data: 2. Code changes: [DIFF] 3. Associated pull request title: [PR] 4. Associated issue report: [IR] 5. Commit Type: [CT]",
     "promptType": "Belmont University Research",
-    "evaluate": false
-  },
-  {
-    "id": 5,
-    "message": "hey write a commit message for these file diffs: [DIFF]",
-    "promptType": "prompt test",
-    "evaluate": false
+    "evaluate": true
   }
 ]
