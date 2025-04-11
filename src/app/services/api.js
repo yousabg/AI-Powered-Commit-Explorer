@@ -89,7 +89,7 @@ export const getDeepSeekResponse = async (input) => {
 
 //Server API
 export const postSubmission = async (completeRatings) => {
-    const response = await fetch('https://llmgitcommitmessagehelper.pythonanywhere.com/add_submission', {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/add_submission`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -106,7 +106,7 @@ export const postSubmission = async (completeRatings) => {
 }
 
 export const getScores = async (original_message, AI_message) => {
-    const response = await fetch("https://llmgitcommitmessagehelper.pythonanywhere.com/evaluate_message", {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/evaluate_message`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -134,7 +134,7 @@ export class PasswordNotSet extends Error {
     }
 }
 export const getResearch = async (password) => {
-    const response = await fetch(`https://llmgitcommitmessagehelper.pythonanywhere.com/get_submissions/${password}`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/get_submissions/${password}`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -155,7 +155,7 @@ export const getResearch = async (password) => {
 }
 
 export const postPassword = async (password) => {
-    const response = await fetch(`https://llmgitcommitmessagehelper.pythonanywhere.com/set_password`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/set_password`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -172,7 +172,7 @@ export const postPassword = async (password) => {
 }
 
 export const getPrompts = async () => {
-    const response = await fetch(`https://llmgitcommitmessagehelper.pythonanywhere.com/get_prompts`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/get_prompts`, {
         method: "GET",
         headers: {
             "Content-Type": "application/json"
@@ -186,7 +186,7 @@ export const getPrompts = async () => {
 }
 
 export const postPrompt = async (prompt, promptType) => {
-    const response = await fetch(`https://llmgitcommitmessagehelper.pythonanywhere.com/add_prompt`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/add_prompt`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
@@ -204,7 +204,7 @@ export const postPrompt = async (prompt, promptType) => {
 }
 
 export const deletePrompt = async (id) => {
-    const response = await fetch(`https://llmgitcommitmessagehelper.pythonanywhere.com/delete_prompt`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/delete_prompt`, {
         method: "DELETE",
         headers: {
             "Content-Type": "application/json"
@@ -220,7 +220,7 @@ export const deletePrompt = async (id) => {
 }
 
 export const toggleEvaluate = async (id) => {
-    const response = await fetch(`https://llmgitcommitmessagehelper.pythonanywhere.com/toggle_evaluate`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_BASE}/toggle_evaluate`, {
         method: "PATCH",
         headers: {
             "Content-Type": "application/json"

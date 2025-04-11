@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "message": "The following is a diff which describes the code changes in a commit, Your task is to write a short commit message accordingly. [DIFF]",
+    "promptType": "Using Large Language Models for Commit Message Generation: A Preliminary Study",
+    "evaluate": true
+  },
+  {
+    "id": 2,
+    "message": "[DIFF] You are a programmer who makes the above code changes. Please write a commit message for the above code change.",
+    "promptType": "Automated Commit Message Generation with Large Language Models: An Empirical Study and Beyond",
+    "evaluate": true
+  },
+  {
+    "id": 3,
+    "message": "This is the list of diff(s) for a commit, please generate the corresponding commit message, and please note providing the commit message directly without additional statements: [DIFF]",
+    "promptType": "Automatic Commit Message Generation: A Critical Review and Directions for Future Work",
+    "evaluate": false
+  },
+  {
+    "id": 4,
+    "message": "Generate a high-quality commit message based on the given information.  Your response must contain **only** the commit message\u2014no explanations, no punctuation, no extra words.  ### Requirements: - Must **clearly describe what changed and why** - Must follow **standard commit message formatting** - Must use **imperative mood** - Must **not** include any punctuation  ### Given Data: 2. Code changes: [DIFF] 3. Associated pull request title: [PR] 4. Associated issue report: [IR] 5. Commit Type: [CT]",
+    "promptType": "Belmont University Research",
+    "evaluate": false
+  },
+  {
+    "id": 5,
+    "message": "hey write a commit message for these file diffs: [DIFF]",
+    "promptType": "prompt test",
+    "evaluate": false
+  }
+]
