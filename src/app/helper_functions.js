@@ -42,8 +42,8 @@ export const chooseResponse = (response, response2) => {
     ) {
         finalResponse = response2;
     } else {
-        if (response.length > 75 || response2.length > 75) {
-            finalResponse = response.length > 75 ? response2 : response;
+        if (response.length > 72 || response2.length > 72) {
+            finalResponse = response.length > 72 ? response2 : response;
         } else {
             finalResponse = response.length >= response2.length ? response : response2;
         }
