@@ -61,16 +61,6 @@ You can get an API key by signing up at OpenRouter.ai.
 
 Then open http://localhost:3000 in your browser to use the tool.
 
-## 🔐 Environment Variables
-
-Create a `.env.local` file in the root of your project with the following:
-
-| Variable                         | Description                        |
-|----------------------------------|------------------------------------|
-| `NEXT_PUBLIC_OPENROUTER_API_KEY` | Your OpenRouter API key (required) |
-
----
-
 ## 📂 File Editing
 
 You can start editing the app by modifying `app/page.js`. The page auto-updates as you edit.
@@ -112,9 +102,9 @@ or localhost restrictions.
 
 ### 🔧 Backend Setup Instructions
 
-1. **Navigate to the backend directory**:
+### 1. Navigate to the backend directory:
 
-         cd backend
+      cd backend
 
 ### 2. Create and activate a virtual environment:
 

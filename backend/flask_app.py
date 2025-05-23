@@ -208,6 +208,10 @@ def process_text(msg):
     processed_words = [to_underline(word) if is_camel_case(word) else word for word in words]
     return ' '.join(processed_words)
 
+# Code for evaluation metrics from P. Xue, L. Wu, Z. Yu, Z. Jin, Z. Yang, X. Li, Z. Yang, and Y. Tan,
+# “Automated commit message generation with large language models:
+# An empirical study and beyond,” arXiv:2404.14824 [cs.SE], 2024, https:
+# //doi.org/10.48550/arXiv.2404.14824.
 @app.route('/evaluate_message', methods=['POST'])
 def evaluate():
     data = request.get_json()

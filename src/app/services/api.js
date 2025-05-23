@@ -49,6 +49,7 @@ export const getPullRequestAndIssues = async(sha, token, username, selectedRepo)
 
 //LLM API
 export const getDeepSeekResponse = async (input) => {
+    console.log(input);
     const response = await fetch("https://openrouter.ai/api/v1/chat/completions", {
         method: "POST",
         headers: {
@@ -65,7 +66,6 @@ export const getDeepSeekResponse = async (input) => {
             ]
         })
     });
-
     if (!response.ok) {
         throw new Error(`HTTP error! status: ${response.status}`);
     }

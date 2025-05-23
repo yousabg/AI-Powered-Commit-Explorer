@@ -230,7 +230,7 @@ export default function Research() {
                         {submission.ratings.map((rating) => (
                             <div key={rating.id} className="mt-2 p-2 border rounded">
                                 <p><strong>Message:</strong> {rating.message}</p>
-                                <p><strong>Message Type:</strong> {rating.prompt_type}</p>
+                                <p><strong>Message Label:</strong> {rating.prompt_type}</p>
                                 <p><strong>Accuracy:</strong> {rating.accuracy}</p>
                                 <p><strong>Applicability:</strong> {rating.applicability}</p>
                                 <p><strong>Completeness:</strong> {rating.completeness}</p>
@@ -258,7 +258,7 @@ export default function Research() {
                         <ul className="list-disc ml-5">
                             {prompts.map((prompt) => (
                                 <div key={prompt.id} className="mb-4 p-2 border rounded">
-                                    <p><strong>Type:</strong> {prompt.promptType}</p>
+                                    <p><strong>Label:</strong> {prompt.promptType}</p>
                                     <p><strong>Message:</strong> {prompt.message}</p>
                                     <button
                                         onClick={() => removePrompt(prompt.id)}
@@ -310,7 +310,7 @@ export default function Research() {
 
                         <input
                             type="text"
-                            placeholder="Enter prompt type"
+                            placeholder="Enter prompt label"
                             value={newPromptType}
                             onChange={(e) => setNewPromptType(e.target.value)}
                             className="border p-2 rounded w-full mb-2"
