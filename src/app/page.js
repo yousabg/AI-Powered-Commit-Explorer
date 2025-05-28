@@ -265,7 +265,7 @@ export default function Home() {
 
         console.log("Sending Data:", completeRatings);
 
-        if (successfulSubmission) {
+        if (!successfulSubmission) {
             try {
                 await postSubmission(completeRatings);
                 setSuccessfulSubmission(true);
