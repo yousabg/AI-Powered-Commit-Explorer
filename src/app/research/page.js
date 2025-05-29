@@ -258,8 +258,8 @@ export default function Research() {
                         <ul className="list-disc ml-5">
                             {prompts.map((prompt) => (
                                 <div key={prompt.id} className="mb-4 p-2 border rounded">
-                                    <p><strong>Label:</strong> {prompt.promptType}</p>
-                                    <p><strong>Message:</strong> {prompt.message}</p>
+                                    <p><strong>Approach Name:</strong> {prompt.promptType}</p>
+                                    <p><strong>Approach Prompt:</strong> {prompt.message}</p>
                                     <button
                                         onClick={() => removePrompt(prompt.id)}
                                         className="mt-2 bg-red-500 text-white px-4 py-2 rounded mr-4"
