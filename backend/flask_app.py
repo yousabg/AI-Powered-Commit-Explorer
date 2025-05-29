@@ -248,10 +248,7 @@ def verify_password(plain_text_password):
     with open(PASSWORD_FILE, "r") as f:
         stored_hash = f.read().strip()
 
-    try:
-        return ph.verify(stored_hash, plain_text_password)
-    except Exception:
-        return False
+    return ph.verify(stored_hash, plain_text_password)
 
 @app.route('/set_password', methods=['POST'])
 def set_password():

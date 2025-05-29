@@ -33,7 +33,7 @@ export default function Research() {
 
     const fetchEvaluationPrompt = async () => {
         try {
-            const response = await fetch("/evaluation_prompt.txt");
+            const response = await fetch("/refinement_prompt.txt");
             const text = await response.text();
             setEvaluationPrompt(text);
         } catch (error) {
@@ -194,7 +194,7 @@ export default function Research() {
                         <button
                             className={`px-4 py-2 rounded ${activeTab === "evaluation_prompt" ? "bg-blue-500 text-white" : "bg-gray-200"}`}
                             onClick={() => setActiveTab("evaluation_prompt")}>
-                            Evaluation Prompt
+                            Refinement Prompt
                         </button>
                     </div>
                 )}
@@ -238,7 +238,7 @@ export default function Research() {
                                 <p><strong>Readability:</strong> {rating.readability}</p>
                                 <p><strong>Rationale:</strong> {rating.rationale}</p>
                                 <p><strong>Success:</strong> {rating.success ? "Yes" : "No"}</p>
-                                <p><strong>Used Evaluation:</strong> {rating.used_evaluate ? "Yes" : "No"}</p>
+                                <p><strong>Used Refinement:</strong> {rating.used_evaluate ? "Yes" : "No"}</p>
                                 <p><strong>Metrics:</strong></p>
                                 <ul className="list-disc ml-5">
                                 {rating.metrics.map((metric) => (
@@ -272,7 +272,7 @@ export default function Research() {
                                         className={`mt-2 px-4 py-2 rounded ${prompt.evaluate ? "bg-green-500" : "bg-red-500"} text-white`}
                                         disabled={loading}
                                     >
-                                        {prompt.evaluate ? "Using Evaluation Prompt" : "Not Using Evaluation Prompt"}
+                                        {prompt.evaluate ? "Using Refinement Prompt" : "Not Using Refinement Prompt"}
                                     </button>
                                 </div>
                             ))}
@@ -327,7 +327,7 @@ export default function Research() {
 
                 {activeTab === "evaluation_prompt" && (
                     <div className="mt-4 p-4 border rounded bg-gray-100">
-                        <h2 className="text-xl font-bold">Evaluation Prompt</h2>
+                        <h2 className="text-xl font-bold">Refinement Prompt</h2>
                         <pre className="whitespace-pre-wrap mt-2">{evaluationPrompt}</pre>
                     </div>
                 )}
